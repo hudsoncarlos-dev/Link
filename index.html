@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+  <!--adicionado classe light ao html-->
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HudsonCarlos</title>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <menu></menu>
+    </div>
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <!-- Criar um profile com foto-->
+        <img src="./assets/avatar.png" alt="Foto comum" />
+        <p>@HudsonCarlos</p>
+      </div>
+
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+        <!--Criar um botões maiores em lista desordenada-->
+        <li>
+          <a href="https://github.com/hudsoncarlos-dev">Ver meu portofólio</a>
+        </li>
+        <li>
+          <a href="">Clientes</a>
+        </li>
+      </ul>
+      <div id="social-links">
+        <!-- Adicionar botões de redes sociais-->
+        <a href="https://www.instagram.com/hudson_carllos/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <!-- acionar os botões para apertar e ir pra rede desejada.-->
+        </a>
+        <a href="https://www.facebook.com/hudson.carlos.524934" target="_blank"
+          ><ion-icon name="logo-facebook"></ion-icon
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/hudson-carlos-0b5b74220"
+          target="_blank>"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+          <!-- acionar os botões-->
+        </a>
+
+        <a href="https://github.com/hudsoncarlos-dev" target="_blank"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+      </div>
+    </div>
+    <footer>Feito com ❤ por Hudson Carlos</footer>
+    <!--Criar rodapé da pagina -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

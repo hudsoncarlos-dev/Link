@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg); inserir imagens no html
+background-repeat: não repetir imagem 
+background-position: center; centralizar imagem 
+background-size: cover; completa a imagem na tela totalmente
+*/
+  background: var(--bg-url) no-repeat top center/cover;
+}
+:root {
+  --text-color: white; /* criar cores padroes em todo o codigo */
+  --bg-url: url(./assets/1.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  /* adicionado modo light para o projeto e os atributos*/
+  --text-color: black; /* cores das fontes */
+  --bg-url: url(./assets/7.jpg); /* local do background light */
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24 px;
+}
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+#profile img {
+  width: 112px;
+}
+/* pseudo-selector - passe o selector */
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+/*SWITCH */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+#switch button {
+  /* CRIANDO ESTILIZAÇÃO DO BOTÃO */
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center; /* ficar centralizado */
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+#switch span {
+  display: block; /* para alinhar as coisas apenas block */
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+}
+
+/* social links - links sociais */
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+
+  font-size: 24px;
+  gap: 16px;
+}
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+#social-links a:hover {
+  /* criar esmaecimento ao passar botão */
+  background: var(--highlight-color);
+  padding: 16px; /* preenchimento */
+  border-radius: 50%; /* borda arrendondada */
+  transition: background 0.5s; /* criar transição */
+}
+footer {
+  text-align: center;
+  padding: 24px 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: background 0.5s;
+}
+
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid var(--text-color)
+    /* comando para utilizar a variavel branco definida no inicio como root */;
+}
