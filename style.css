@@ -11,6 +11,8 @@ background-position: center; centralizar imagem
 background-size: cover; completa a imagem na tela totalmente
 */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh; /* viewport height é para que o background fique visivel em toda
+  area da tela, ou viewport */
 }
 :root {
   --text-color: white; /* criar cores padroes em todo o codigo */
@@ -150,4 +152,14 @@ ul li a:hover {
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid var(--text-color)
     /* comando para utilizar a variavel branco definida no inicio como root */;
+}
+/* media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/1desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/7desktop.jpg);
+  }
 }
